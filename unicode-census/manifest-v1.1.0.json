@@ -1,0 +1,175 @@
+{
+ "study": "Invisible-character census in Claude model output",
+ "version": "1.1.0",
+ "runDate": "2026-08-12",
+ "question": "Do Claude text outputs contain invisible Unicode characters (zero-width spaces, joiners, byte-order marks, soft hyphens, bidirectional format controls or tag characters) of the kind widely claimed online to be 'the Claude watermark'?",
+ "whatThisCannotAnswer": "Whether Anthropic's confirmed statistical text watermark is present. No public detector exists for it, so its presence or absence cannot be measured by us or by anyone else outside Anthropic. This study measures only what is observable in the bytes.",
+ "models": [
+  {
+   "key": "opus",
+   "id": "claude-opus-5",
+   "generators": 4,
+   "outputs": 32
+  },
+  {
+   "key": "sonnet",
+   "id": "claude-sonnet-5",
+   "generators": 4,
+   "outputs": 32
+  },
+  {
+   "key": "haiku",
+   "id": "claude-haiku-4-5-20251001",
+   "generators": 4,
+   "outputs": 32
+  },
+  {
+   "key": "fable",
+   "id": "claude-fable-5-1",
+   "generators": 4,
+   "outputs": 32,
+   "addedIn": "1.1.0",
+   "note": "Anthropic names this model as watermark-supported; the three earlier tiers predate its 2026-08-02 threshold."
+  }
+ ],
+ "harness": {
+  "interface": "Claude Code CLI, subagent tasks",
+  "capturePath": "Model output written directly to disk by the generating process using its file-write tool, with no intermediate copy/paste, clipboard, terminal render or editor step",
+  "note": "Generation ran through an agentic harness rather than the claude.ai web interface. If a provider applied invisible characters as a presentation-layer step in a specific product surface, this capture path would not observe it. Sampling-layer marking would be unaffected by the harness.",
+  "revisionNote": "The 2026-09-03 fable run used the same interface and capture path: Claude Code subagent tasks, output written directly to disk by the generating process with no copy/paste, clipboard, terminal render or editor step. Four generators, one output per prompt each."
+ },
+ "design": {
+  "prompts": 8,
+  "replicatesPerModel": 4,
+  "outputsPerModel": 32,
+  "totalOutputs": 128,
+  "samplingSettings": "Not controllable through this harness; defaults were used and are not published by the provider",
+  "models": 4
+ },
+ "prompts": [
+  {
+   "id": "p01-short-factual",
+   "language": "en",
+   "shape": "short factual answer",
+   "text": "In two sentences, explain why the sky appears blue."
+  },
+  {
+   "id": "p02-long-essay",
+   "language": "en",
+   "shape": "long prose",
+   "text": "Write a 600-word essay on the history of the printing press and its effect on literacy in Europe."
+  },
+  {
+   "id": "p03-code",
+   "language": "en",
+   "shape": "source code",
+   "text": "Write a Python function that merges two sorted lists into one sorted list. Include a docstring and three doctests."
+  },
+  {
+   "id": "p04-list",
+   "language": "en",
+   "shape": "list",
+   "text": "List 10 practical tips for reducing household energy use. One line each, no intro."
+  },
+  {
+   "id": "p05-spanish",
+   "language": "es",
+   "shape": "prose, non-English",
+   "text": "Explica en español, en unas 200 palabras, qué es la fotosíntesis y por qué importa."
+  },
+  {
+   "id": "p06-japanese",
+   "language": "ja",
+   "shape": "poetry, non-Latin script",
+   "text": "日本語で俳句を三つ作ってください。それぞれに季語を必ず入れてください。"
+  },
+  {
+   "id": "p07-table",
+   "language": "en",
+   "shape": "markdown table",
+   "text": "Produce a markdown table comparing four programming languages across five attributes."
+  },
+  {
+   "id": "p08-dialogue",
+   "language": "en",
+   "shape": "dialogue",
+   "text": "Write a 300-word dialogue between a librarian and a student about how to find primary sources."
+  }
+ ],
+ "positiveControl": {
+  "path": "control/agent-written/positive-control.txt",
+  "purpose": "Confirm the capture path preserves invisible characters, so that a count of zero in the corpus means absence in the output rather than loss in transit.",
+  "requested": [
+   "U+200B",
+   "U+200C",
+   "U+00AD",
+   "U+00A0"
+  ],
+  "detected": [
+   "U+200B",
+   "U+200C",
+   "U+00AD"
+  ],
+  "result": "Three of the four requested characters were emitted and detected, confirming the pipeline preserves zero-width and format characters end to end. The fourth was replaced by an ordinary ASCII space by the generating model, which is itself consistent with the corpus result.",
+  "fableRun": {
+   "path": "control/fable/positive-control.txt",
+   "runDate": "2026-09-03",
+   "requested": [
+    "U+200B",
+    "U+200C",
+    "U+00AD",
+    "U+00A0"
+   ],
+   "detected": [
+    "U+200B",
+    "U+200C",
+    "U+00AD"
+   ],
+   "result": "Reproduced the original outcome exactly. U+200B, U+200C and U+00AD were emitted and verified on disk by byte dump; U+00A0 was replaced with an ordinary ASCII space on two independent attempts. So a zero count for the first three is genuine absence from the output, and a zero count for U+00A0 stays indistinguishable from loss in transit on this path."
+  }
+ },
+ "results": {
+  "outputs": 128,
+  "words": 26093,
+  "codePoints": 169545,
+  "zeroWidthAndFormatCharacters": 0,
+  "filesContainingAnyZeroWidthOrFormatCharacter": 0,
+  "ideographicSpaces": 48,
+  "ideographicSpaceNote": "All 48 occur in Japanese-language outputs, where U+3000 is ordinary Japanese typography, not a hidden mark.",
+  "emDashTotal": 68,
+  "emDashesPer1000Words": {
+   "claude-opus-5": 2.12,
+   "claude-sonnet-5": 4.59,
+   "claude-haiku-4-5-20251001": 4.04
+  },
+  "curlyQuotesAndApostrophes": 0,
+  "models": 4,
+  "fable": {
+   "outputs": 32,
+   "words": 6729,
+   "zeroWidthAndFormatCharacters": 0,
+   "ideographicSpaces": 18
+  },
+  "emDashNote": "Rates are published for the three models generated on 2026-08-12 only. See exclusions."
+ },
+ "limitations": [
+  "One provider, three model identifiers, one harness, one date. Not a longitudinal study.",
+  "96 outputs and 19,364 words is enough to rule out a per-output or per-paragraph invisible marker; it is not enough to rule out a rare probabilistic marker appearing in well under 1% of outputs.",
+  "Generation ran through the Claude Code CLI. A presentation-layer marker applied only in another product surface would not be visible here.",
+  "The corpus is machine-generated for this study rather than sampled from real user sessions, so prompt distribution is ours, not the world's.",
+  "Nothing here measures Anthropic's statistical text watermark, which remains undetectable to the public.",
+  "The fourth model was added 22 days after the first three, through the same harness but not in the same session. Anything that changed in the harness between those dates is uncontrolled, and the em dash exclusion above is one known instance of exactly that."
+ ],
+ "reproduce": "node scan.mjs [corpusDir] [outDir]. Dependency-free Node script, reads corpusDir/<model>/*.txt.",
+ "license": "Data and code released for reuse with attribution and a link back to https://www.aiwatermarkremoval.com/lab/claude-invisible-characters",
+ "revisionDate": "2026-09-03",
+ "revisionNote": "Version 1.1.0 extends the corpus to a fourth model, claude-fable-5-1, the first generally available Claude model launched after Anthropic's 2026-08-02 marking threshold and the first in this corpus that Anthropic confirms carries the text watermark. The original three-model corpus is unchanged and remains published as v1.0.0.",
+ "exclusions": [
+  {
+   "field": "em dash rate",
+   "model": "fable",
+   "action": "excluded from cross-model comparison",
+   "reason": "The fable outputs were generated on 2026-09-03 through a harness carrying a standing project instruction never to use em dashes. The original three models were generated 2026-08-12 at 23:32, 19 minutes before that instruction was written. The fable figure of zero measures the instruction rather than the model. No output was dropped from the corpus; only this one derived statistic is withheld for that model. Character-class counts are unaffected, because no project instruction mentions zero-width or format characters and the positive control confirms the path preserves them."
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+MAYA: Excuse me, is this the reference desk? My professor said my paper needs primary sources, and I'm not sure what counts.
+
+LIBRARIAN: You're in the right place. What's the paper about?
+
+MAYA: Working conditions in textile mills in the 1830s, in Massachusetts.
+
+LIBRARIAN: Good topic, and a well-documented one. A primary source is anything produced by someone who was there at the time. For your subject that could be mill workers' letters, factory rulebooks, payroll ledgers, state investigation reports, or newspapers from the period.
+
+MAYA: I've mostly been finding books by historians.
+
+LIBRARIAN: Those are secondary, but don't throw them out. Look at their footnotes and bibliographies. When a historian quotes a mill girl's diary, the citation tells you exactly which archive holds it. That's the fastest route into the primary material.
+
+MAYA: I hadn't thought of reading the footnotes as a search tool.
+
+LIBRARIAN: It's the trick most researchers use. Beyond that, try our digital collections. The Library of Congress has Chronicling America for newspapers, and there's a full run of the Lowell Offering digitized, written by the workers themselves.
+
+MAYA: Do I need to visit an archive in person?
+
+LIBRARIAN: For an undergraduate paper, probably not. But if you want something local, our special collections has a small manuscript group from a Lawrence mill family. I can request the finding aid for you.
+
+MAYA: What's a finding aid?
+
+LIBRARIAN: An inventory describing what's in a collection, box by box. It saves you from opening thirty folders blindly.
+
+MAYA: That would help. Can I search by date somehow?
+
+LIBRARIAN: In most databases, yes. Set a date range of 1830 to 1845 and add subject terms like "textile industry" or "labor." Let me show you on this terminal.
+
+MAYA: Thank you. This felt impossible ten minutes ago.
+
+LIBRARIAN: It usually does. Come back when you've found something and we'll figure out how to cite it.

@@ -1,0 +1,7 @@
+| Attribute | Python | JavaScript | Rust | Go |
+|---|---|---|---|---|
+| Typing | Dynamic, strong | Dynamic, weak | Static, strong, inferred | Static, strong |
+| Memory management | Garbage collected (reference counting plus cycle collector) | Garbage collected | Ownership and borrowing, no garbage collector | Garbage collected |
+| Concurrency model | Threads limited by the GIL, asyncio, multiprocessing | Single-threaded event loop with async/await, Web Workers | OS threads and async/await, data-race safety enforced at compile time | Goroutines and channels |
+| Typical performance | Slow when interpreted, fast when delegating to C extensions | Moderate to fast thanks to JIT compilation | Very fast, comparable to C and C++ | Fast, with some garbage collection overhead |
+| Primary use cases | Data science, scripting, automation, web backends | Web frontends, Node.js backends, developer tooling | Systems programming, CLI tools, WebAssembly, embedded | Cloud services, networking, infrastructure and DevOps tooling |

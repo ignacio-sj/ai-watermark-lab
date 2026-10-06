@@ -1,0 +1,27 @@
+"Excuse me, I'm working on a research paper about the 1960s civil rights movement, and my professor wants primary sources. I don't really know where to start."
+
+"That's a great project. First, let's clarify what counts as a primary source for your topic—things like newspapers from that era, personal letters, speeches, photographs, or government documents. Have you checked our digital archives yet?"
+
+"No, I didn't even know we had those."
+
+"We subscribe to several databases. For civil rights history specifically, I'd point you to our newspaper archive—it has scanned pages from papers going back over a century. You can search by date range and keyword."
+
+"That sounds perfect. What about speeches or personal accounts?"
+
+"For speeches, try the audiovisual archive—it has recordings and transcripts. For personal accounts, oral history collections are great primary sources too. Our library has a partnership with a regional oral history project focused on that exact period."
+
+"Is any of that available online, or do I need to come in person?"
+
+"Most of it's online through our library portal—just log in with your student ID. Some rarer items, like original manuscripts, are only in our special collections room, but you'd need an appointment for those."
+
+"Should I also look at secondary sources to find leads on primary ones?"
+
+"Exactly right. A good history book on the topic will cite primary sources in its footnotes and bibliography. That's often the fastest way to find specific documents worth tracking down yourself."
+
+"This is really helpful. One more thing—how do I know if a source is actually primary and not secondary?"
+
+"Ask yourself: was this created during the event, by someone who witnessed or participated in it? If yes, it's primary. Analysis written afterward, even by historians, is secondary."
+
+"Got it. Thank you so much for your help."
+
+"Anytime. Come back if you get stuck navigating the databases."

@@ -1,0 +1,7 @@
+| Attribute | Python | JavaScript | Rust | Java |
+|---|---|---|---|---|
+| Typing | Dynamic, strong | Dynamic, weak | Static, strong | Static, strong |
+| Primary use case | Data science, scripting, automation | Web front-end, full-stack | Systems programming, performance-critical apps | Enterprise backend, Android |
+| Memory management | Garbage collected | Garbage collected | Ownership/borrow checker (no GC) | Garbage collected |
+| Performance | Moderate to slow | Moderate | Very fast, near C/C++ | Fast |
+| Learning curve | Low | Low to moderate | Steep | Moderate |

@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: >-
+  If you use this data, please cite the study page for the study you used
+  (listed in README.md) and this repository, and carry the sample size and
+  limitations with any number you reuse.
+title: "AI Watermark Lab: open data"
+type: dataset
+authors:
+  - name: "ignacio-sj"
+repository-code: "https://github.com/ignacio-sj/ai-watermark-lab"
+url: "https://www.aiwatermarkremoval.com/lab"
+license: CC-BY-4.0
+keywords:
+  - AI watermark
+  - text watermarking
+  - Unicode
+  - invisible characters
+  - Claude
+  - open data
+abstract: >-
+  Data, scripts and protocols for two studies: a census of invisible
+  Unicode characters in 128 outputs from four Claude models, and a matrix
+  of which of 18 invisible characters survive 12 code transformations.
+  Neither study can detect a statistical text watermark. Scripts are MIT
+  licensed.

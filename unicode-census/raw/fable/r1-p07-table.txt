@@ -1,0 +1,7 @@
+| Attribute            | Python                          | JavaScript                        | Rust                              | Go                                |
+|----------------------|---------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
+| Typing               | Dynamic, optional type hints    | Dynamic (static via TypeScript)   | Static, strong, inferred          | Static, strong, some inference    |
+| Memory management    | Garbage collected               | Garbage collected                 | Ownership and borrowing, no GC    | Garbage collected                 |
+| Performance          | Slow interpreter, fast C libs   | Fast JIT (V8), single-threaded    | Native speed, comparable to C/C++ | Native, close to C, fast compile  |
+| Concurrency model    | Threads (GIL), asyncio, multiprocessing | Event loop, async/await, workers | Threads, async/await, channels, fearless concurrency | Goroutines and channels |
+| Primary use cases    | Data science, scripting, backend, ML | Web front end, Node.js backends | Systems, CLI tools, WebAssembly, embedded | Cloud services, CLI tools, infrastructure |

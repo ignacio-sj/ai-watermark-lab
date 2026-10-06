@@ -1,0 +1,7 @@
+| Feature | Python | JavaScript | Java | Go |
+|---------|--------|------------|------|-----|
+| Ease of Learning | Very Easy | Easy | Medium | Easy |
+| Execution Speed | Slow | Medium | Fast | Very Fast |
+| Memory Usage | Medium | Medium | High | Low |
+| Community & Ecosystem | Excellent | Excellent | Excellent | Good |
+| Best Use Cases | Data Science, ML, Scripting | Web Frontend, Node.js | Enterprise, Android | Systems, Cloud Services |

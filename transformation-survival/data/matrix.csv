@@ -1,0 +1,19 @@
+code,name,nfc,nfd,nfkc,nfkd,json,uri,base64,latin1,whitespace-collapse,trim-lines,ascii-only,printable-filter
+U+200B,"Zero width space",survives,survives,survives,survives,survives,survives,survives,destroyed,survives,survives,destroyed,destroyed
+U+200C,"Zero width non-joiner",survives,survives,survives,survives,survives,survives,survives,destroyed,survives,survives,destroyed,destroyed
+U+200D,"Zero width joiner",survives,survives,survives,survives,survives,survives,survives,destroyed,survives,survives,destroyed,destroyed
+U+2060,"Word joiner",survives,survives,survives,survives,survives,survives,survives,destroyed,survives,survives,destroyed,destroyed
+U+FEFF,"Zero width no-break space (BOM)",survives,survives,survives,survives,survives,survives,survives,destroyed,destroyed,survives,destroyed,destroyed
+U+00AD,"Soft hyphen",survives,survives,survives,survives,survives,survives,survives,survives,survives,survives,destroyed,destroyed
+U+034F,"Combining grapheme joiner",survives,survives,survives,survives,survives,survives,survives,destroyed,survives,survives,destroyed,survives
+U+061C,"Arabic letter mark",survives,survives,survives,survives,survives,survives,survives,destroyed,survives,survives,destroyed,destroyed
+U+200E,"Left-to-right mark",survives,survives,survives,survives,survives,survives,survives,destroyed,survives,survives,destroyed,destroyed
+U+202D,"Left-to-right override",survives,survives,survives,survives,survives,survives,survives,destroyed,survives,survives,destroyed,destroyed
+U+2066,"Left-to-right isolate",survives,survives,survives,survives,survives,survives,survives,destroyed,survives,survives,destroyed,destroyed
+U+FE0F,"Variation selector 16",survives,survives,survives,survives,survives,survives,survives,destroyed,survives,survives,destroyed,survives
+U+E0041,"Tag latin capital A",survives,survives,survives,survives,survives,survives,survives,destroyed,survives,survives,destroyed,destroyed
+U+00A0,"No-break space",survives,survives,destroyed,destroyed,survives,survives,survives,survives,destroyed,survives,destroyed,survives
+U+202F,"Narrow no-break space",survives,survives,destroyed,destroyed,survives,survives,survives,destroyed,destroyed,survives,destroyed,survives
+U+2009,"Thin space",survives,survives,destroyed,destroyed,survives,survives,survives,destroyed,destroyed,survives,destroyed,survives
+U+3000,"Ideographic space",survives,survives,destroyed,destroyed,survives,survives,survives,destroyed,destroyed,survives,destroyed,survives
+U+1680,"Ogham space mark",survives,survives,survives,survives,survives,survives,survives,destroyed,destroyed,survives,destroyed,survives

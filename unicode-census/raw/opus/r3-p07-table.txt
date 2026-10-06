@@ -1,0 +1,9 @@
+| Attribute | Python | Rust | JavaScript | Go |
+|---|---|---|---|---|
+| Typing | Dynamic, optional type hints | Static, strong, inferred | Dynamic, weak (TypeScript adds static) | Static, strong, lightweight inference |
+| Memory management | Garbage collected (refcount + cycle GC) | Ownership and borrowing, no GC | Garbage collected | Garbage collected, low-latency collector |
+| Runtime performance | Slow; relies on C extensions for speed | Near C, no runtime overhead | Fast for a dynamic language via JIT | Fast, close to C for most server work |
+| Concurrency model | Threads limited by the GIL; asyncio for I/O | Threads with compile-time data-race safety | Single-threaded event loop, workers for parallelism | Goroutines and channels, built into the runtime |
+| Typical use | Data science, ML, scripting, backends | Systems, embedded, performance-critical services | Browsers, Node backends, full-stack apps | Cloud services, CLIs, networked infrastructure |
+
+A rough summary: Python optimizes for how quickly a person can write it, Rust for guarantees the compiler can prove, JavaScript for reaching the browser, and Go for keeping large teams and services simple.

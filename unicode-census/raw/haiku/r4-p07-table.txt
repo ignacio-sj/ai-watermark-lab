@@ -1,0 +1,6 @@
+| Language | Typing | Learning Curve | Performance | Primary Use Case |
+|----------|--------|-----------------|-------------|-----------------|
+| Python | Dynamic | Beginner-friendly | Moderate | Data science, scripting, web backends |
+| JavaScript | Dynamic | Beginner-friendly | Good | Web browsers, web development, Node.js |
+| Java | Static | Moderate | Excellent | Enterprise applications, large systems |
+| Go | Static | Moderate | Excellent | Concurrent systems, cloud infrastructure |

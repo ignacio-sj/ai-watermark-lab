@@ -1,0 +1,7 @@
+| Attribute | Python | JavaScript | Java | Go |
+|-----------|--------|------------|------|-----|
+| Ease of Learning | Very Easy | Easy | Moderate | Moderate |
+| Performance | Slow | Fast | Very Fast | Very Fast |
+| Community Size | Very Large | Very Large | Very Large | Growing |
+| Primary Use | Data Science, Web, Automation | Web, Frontend, Backend | Enterprise, Large Systems | Systems, Concurrent Applications |
+| Compilation | Interpreted | Interpreted | Compiled | Compiled |

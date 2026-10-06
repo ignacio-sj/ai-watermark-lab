@@ -1,0 +1,35 @@
+```python
+def merge_sorted(a, b):
+    """Merge two sorted lists into a single sorted list.
+
+    Both input lists must already be sorted in ascending order. The
+    merge is stable: when elements compare equal, items from ``a``
+    come before items from ``b``. Neither input list is modified.
+
+    >>> merge_sorted([1, 3, 5], [2, 4, 6])
+    [1, 2, 3, 4, 5, 6]
+    >>> merge_sorted([], [1, 2, 3])
+    [1, 2, 3]
+    >>> merge_sorted([1, 2, 2], [2, 3])
+    [1, 2, 2, 2, 3]
+    """
+    merged = []
+    i = j = 0
+    while i < len(a) and j < len(b):
+        if a[i] <= b[j]:
+            merged.append(a[i])
+            i += 1
+        else:
+            merged.append(b[j])
+            j += 1
+    merged.extend(a[i:])
+    merged.extend(b[j:])
+    return merged
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+```
+
+Run the file directly to execute the doctests; it prints nothing when all three pass, or add `-v` (`python merge_sorted.py -v`) to see each test reported.

@@ -1,0 +1,9 @@
+| Attribute | Python | Rust | Go | JavaScript |
+|---|---|---|---|---|
+| Typing | Dynamic, optional type hints | Static, strong, inferred | Static, structural interfaces | Dynamic, weak, coerces freely |
+| Memory management | Garbage collected (refcount + cycles) | Ownership and borrowing, no GC | Garbage collected, low-latency | Garbage collected |
+| Concurrency model | Threads limited by the GIL; asyncio for I/O | Threads with compile-time data-race safety | Goroutines and channels | Single-threaded event loop, workers for parallelism |
+| Typical performance | Slow; leans on C extensions | Near C, no runtime overhead | Fast, small GC pauses | Fast for a dynamic language via JIT |
+| Best-fit domains | Data science, ML, scripting, automation | Systems, embedded, performance-critical services | Network services, CLIs, infrastructure | Web front end, Node backends, tooling |
+
+A few notes worth adding: Python's GIL is being made optional as of 3.13, so the concurrency picture there is shifting. Rust buys its safety and speed with the steepest learning curve of the four. Go deliberately trades expressiveness for fast compiles and easy onboarding. JavaScript's weak typing is the main reason most serious codebases now use TypeScript on top of it.

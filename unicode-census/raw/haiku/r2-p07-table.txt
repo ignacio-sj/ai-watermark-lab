@@ -1,0 +1,7 @@
+| Attribute | Python | JavaScript | Java | Go |
+|---|---|---|---|---|
+| Syntax | Intuitive and readable | Flexible but inconsistent | Verbose and strict | Concise and clear |
+| Execution Speed | Slow (interpreted) | Fast (JIT compiled) | Very fast (compiled) | Very fast (compiled) |
+| Type System | Dynamic | Dynamic | Static | Static |
+| Learning Curve | Beginner-friendly | Moderate | Steep | Moderate |
+| Primary Use Case | Data science, scripting | Web development, frontend | Enterprise applications | Systems programming, DevOps |

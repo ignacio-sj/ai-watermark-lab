@@ -1,0 +1,8 @@
+| Attribute | Python | Rust | Go | TypeScript |
+|---|---|---|---|---|
+| Typing | Dynamic, optional type hints checked by external tools | Static, strong, inferred; ownership tracked at compile time | Static, strong, lightweight inference | Static layer over dynamic JavaScript; types erased at runtime |
+| Memory management | Reference counting plus cycle-collecting GC | No GC; ownership and borrowing enforced at compile time | Concurrent, low-latency garbage collector | Whatever the host JS engine provides (generational GC) |
+| Concurrency model | GIL-bound threads, asyncio, or multiprocessing | Threads with compile-time data-race prevention; async via runtimes | Goroutines and channels built into the language | Single-threaded event loop; workers for parallelism |
+| Typical performance | Slow for CPU-bound work; fast when delegating to C extensions | Comparable to C/C++ | Fast, with predictable GC pauses | Good for a JIT-ed dynamic language; well behind Rust or Go |
+| Best-fit domains | Data science, ML, scripting, glue code | Systems software, embedded, performance-critical services | Network services, CLIs, cloud infrastructure | Web front ends, Node services, full-stack applications |
+| Learning curve | Gentle | Steep, mostly due to the borrow checker | Gentle by design; small feature surface | Moderate; grows sharply with advanced type features |

@@ -1,0 +1,482 @@
+{
+  "study": "Transformation-survival matrix for invisible characters",
+  "runDate": "2026-08-12",
+  "characters": 18,
+  "transformations": [
+    {
+      "id": "nfc",
+      "label": "Unicode NFC normalization",
+      "note": "The default normalization for storage and comparison in many systems."
+    },
+    {
+      "id": "nfd",
+      "label": "Unicode NFD normalization",
+      "note": "Canonical decomposition. Used by some filesystems, notably macOS HFS+."
+    },
+    {
+      "id": "nfkc",
+      "label": "Unicode NFKC normalization",
+      "note": "Compatibility normalization. Applied by identifier rules, search indexes, and many sanitizers."
+    },
+    {
+      "id": "nfkd",
+      "label": "Unicode NFKD normalization",
+      "note": "Compatibility decomposition, the aggressive cousin of NFKC."
+    },
+    {
+      "id": "json",
+      "label": "JSON round-trip",
+      "note": "Every API call, config file, and log line that carries the text."
+    },
+    {
+      "id": "uri",
+      "label": "URI encode and decode",
+      "note": "Query strings, form submissions, and anything that travels in a URL."
+    },
+    {
+      "id": "base64",
+      "label": "Base64 round-trip (UTF-8)",
+      "note": "Email transport, data URIs, and token payloads."
+    },
+    {
+      "id": "latin1",
+      "label": "Latin-1 storage (lossy)",
+      "note": "A legacy database column or export that keeps only the low byte of each character."
+    },
+    {
+      "id": "whitespace-collapse",
+      "label": "Whitespace collapse (/\\s+/ to one space)",
+      "note": "The single most common 'tidy up this text' regex in production code."
+    },
+    {
+      "id": "trim-lines",
+      "label": "Per-line trim",
+      "note": "Applied by editors on save, and by most Markdown pipelines."
+    },
+    {
+      "id": "ascii-only",
+      "label": "Strip non-ASCII",
+      "note": "The naive sanitizer. Destroys accented letters and every non-Latin script too."
+    },
+    {
+      "id": "printable-filter",
+      "label": "Strip Unicode format characters (\\p{Cf})",
+      "note": "The targeted version: removes the format category and leaves real text alone."
+    }
+  ],
+  "results": [
+    {
+      "code": "U+200B",
+      "name": "Zero width space",
+      "survives": {
+        "nfc": true,
+        "nfd": true,
+        "nfkc": true,
+        "nfkd": true,
+        "json": true,
+        "uri": true,
+        "base64": true,
+        "latin1": false,
+        "whitespace-collapse": true,
+        "trim-lines": true,
+        "ascii-only": false,
+        "printable-filter": false
+      }
+    },
+    {
+      "code": "U+200C",
+      "name": "Zero width non-joiner",
+      "survives": {
+        "nfc": true,
+        "nfd": true,
+        "nfkc": true,
+        "nfkd": true,
+        "json": true,
+        "uri": true,
+        "base64": true,
+        "latin1": false,
+        "whitespace-collapse": true,
+        "trim-lines": true,
+        "ascii-only": false,
+        "printable-filter": false
+      }
+    },
+    {
+      "code": "U+200D",
+      "name": "Zero width joiner",
+      "survives": {
+        "nfc": true,
+        "nfd": true,
+        "nfkc": true,
+        "nfkd": true,
+        "json": true,
+        "uri": true,
+        "base64": true,
+        "latin1": false,
+        "whitespace-collapse": true,
+        "trim-lines": true,
+        "ascii-only": false,
+        "printable-filter": false
+      }
+    },
+    {
+      "code": "U+2060",
+      "name": "Word joiner",
+      "survives": {
+        "nfc": true,
+        "nfd": true,
+        "nfkc": true,
+        "nfkd": true,
+        "json": true,
+        "uri": true,
+        "base64": true,
+        "latin1": false,
+        "whitespace-collapse": true,
+        "trim-lines": true,
+        "ascii-only": false,
+        "printable-filter": false
+      }
+    },
+    {
+      "code": "U+FEFF",
+      "name": "Zero width no-break space (BOM)",
+      "survives": {
+        "nfc": true,
+        "nfd": true,
+        "nfkc": true,
+        "nfkd": true,
+        "json": true,
+        "uri": true,
+        "base64": true,
+        "latin1": false,
+        "whitespace-collapse": false,
+        "trim-lines": true,
+        "ascii-only": false,
+        "printable-filter": false
+      }
+    },
+    {
+      "code": "U+00AD",
+      "name": "Soft hyphen",
+      "survives": {
+        "nfc": true,
+        "nfd": true,
+        "nfkc": true,
+        "nfkd": true,
+        "json": true,
+        "uri": true,
+        "base64": true,
+        "latin1": true,
+        "whitespace-collapse": true,
+        "trim-lines": true,
+        "ascii-only": false,
+        "printable-filter": false
+      }
+    },
+    {
+      "code": "U+034F",
+      "name": "Combining grapheme joiner",
+      "survives": {
+        "nfc": true,
+        "nfd": true,
+        "nfkc": true,
+        "nfkd": true,
+        "json": true,
+        "uri": true,
+        "base64": true,
+        "latin1": false,
+        "whitespace-collapse": true,
+        "trim-lines": true,
+        "ascii-only": false,
+        "printable-filter": true
+      }
+    },
+    {
+      "code": "U+061C",
+      "name": "Arabic letter mark",
+      "survives": {
+        "nfc": true,
+        "nfd": true,
+        "nfkc": true,
+        "nfkd": true,
+        "json": true,
+        "uri": true,
+        "base64": true,
+        "latin1": false,
+        "whitespace-collapse": true,
+        "trim-lines": true,
+        "ascii-only": false,
+        "printable-filter": false
+      }
+    },
+    {
+      "code": "U+200E",
+      "name": "Left-to-right mark",
+      "survives": {
+        "nfc": true,
+        "nfd": true,
+        "nfkc": true,
+        "nfkd": true,
+        "json": true,
+        "uri": true,
+        "base64": true,
+        "latin1": false,
+        "whitespace-collapse": true,
+        "trim-lines": true,
+        "ascii-only": false,
+        "printable-filter": false
+      }
+    },
+    {
+      "code": "U+202D",
+      "name": "Left-to-right override",
+      "survives": {
+        "nfc": true,
+        "nfd": true,
+        "nfkc": true,
+        "nfkd": true,
+        "json": true,
+        "uri": true,
+        "base64": true,
+        "latin1": false,
+        "whitespace-collapse": true,
+        "trim-lines": true,
+        "ascii-only": false,
+        "printable-filter": false
+      }
+    },
+    {
+      "code": "U+2066",
+      "name": "Left-to-right isolate",
+      "survives": {
+        "nfc": true,
+        "nfd": true,
+        "nfkc": true,
+        "nfkd": true,
+        "json": true,
+        "uri": true,
+        "base64": true,
+        "latin1": false,
+        "whitespace-collapse": true,
+        "trim-lines": true,
+        "ascii-only": false,
+        "printable-filter": false
+      }
+    },
+    {
+      "code": "U+FE0F",
+      "name": "Variation selector 16",
+      "survives": {
+        "nfc": true,
+        "nfd": true,
+        "nfkc": true,
+        "nfkd": true,
+        "json": true,
+        "uri": true,
+        "base64": true,
+        "latin1": false,
+        "whitespace-collapse": true,
+        "trim-lines": true,
+        "ascii-only": false,
+        "printable-filter": true
+      }
+    },
+    {
+      "code": "U+E0041",
+      "name": "Tag latin capital A",
+      "survives": {
+        "nfc": true,
+        "nfd": true,
+        "nfkc": true,
+        "nfkd": true,
+        "json": true,
+        "uri": true,
+        "base64": true,
+        "latin1": false,
+        "whitespace-collapse": true,
+        "trim-lines": true,
+        "ascii-only": false,
+        "printable-filter": false
+      }
+    },
+    {
+      "code": "U+00A0",
+      "name": "No-break space",
+      "survives": {
+        "nfc": true,
+        "nfd": true,
+        "nfkc": false,
+        "nfkd": false,
+        "json": true,
+        "uri": true,
+        "base64": true,
+        "latin1": true,
+        "whitespace-collapse": false,
+        "trim-lines": true,
+        "ascii-only": false,
+        "printable-filter": true
+      }
+    },
+    {
+      "code": "U+202F",
+      "name": "Narrow no-break space",
+      "survives": {
+        "nfc": true,
+        "nfd": true,
+        "nfkc": false,
+        "nfkd": false,
+        "json": true,
+        "uri": true,
+        "base64": true,
+        "latin1": false,
+        "whitespace-collapse": false,
+        "trim-lines": true,
+        "ascii-only": false,
+        "printable-filter": true
+      }
+    },
+    {
+      "code": "U+2009",
+      "name": "Thin space",
+      "survives": {
+        "nfc": true,
+        "nfd": true,
+        "nfkc": false,
+        "nfkd": false,
+        "json": true,
+        "uri": true,
+        "base64": true,
+        "latin1": false,
+        "whitespace-collapse": false,
+        "trim-lines": true,
+        "ascii-only": false,
+        "printable-filter": true
+      }
+    },
+    {
+      "code": "U+3000",
+      "name": "Ideographic space",
+      "survives": {
+        "nfc": true,
+        "nfd": true,
+        "nfkc": false,
+        "nfkd": false,
+        "json": true,
+        "uri": true,
+        "base64": true,
+        "latin1": false,
+        "whitespace-collapse": false,
+        "trim-lines": true,
+        "ascii-only": false,
+        "printable-filter": true
+      }
+    },
+    {
+      "code": "U+1680",
+      "name": "Ogham space mark",
+      "survives": {
+        "nfc": true,
+        "nfd": true,
+        "nfkc": true,
+        "nfkd": true,
+        "json": true,
+        "uri": true,
+        "base64": true,
+        "latin1": false,
+        "whitespace-collapse": false,
+        "trim-lines": true,
+        "ascii-only": false,
+        "printable-filter": true
+      }
+    }
+  ],
+  "totals": [
+    {
+      "id": "nfc",
+      "label": "Unicode NFC normalization",
+      "survivors": 18,
+      "destroyed": 0
+    },
+    {
+      "id": "nfd",
+      "label": "Unicode NFD normalization",
+      "survivors": 18,
+      "destroyed": 0
+    },
+    {
+      "id": "nfkc",
+      "label": "Unicode NFKC normalization",
+      "survivors": 14,
+      "destroyed": 4
+    },
+    {
+      "id": "nfkd",
+      "label": "Unicode NFKD normalization",
+      "survivors": 14,
+      "destroyed": 4
+    },
+    {
+      "id": "json",
+      "label": "JSON round-trip",
+      "survivors": 18,
+      "destroyed": 0
+    },
+    {
+      "id": "uri",
+      "label": "URI encode and decode",
+      "survivors": 18,
+      "destroyed": 0
+    },
+    {
+      "id": "base64",
+      "label": "Base64 round-trip (UTF-8)",
+      "survivors": 18,
+      "destroyed": 0
+    },
+    {
+      "id": "latin1",
+      "label": "Latin-1 storage (lossy)",
+      "survivors": 2,
+      "destroyed": 16
+    },
+    {
+      "id": "whitespace-collapse",
+      "label": "Whitespace collapse (/\\s+/ to one space)",
+      "survivors": 12,
+      "destroyed": 6
+    },
+    {
+      "id": "trim-lines",
+      "label": "Per-line trim",
+      "survivors": 18,
+      "destroyed": 0
+    },
+    {
+      "id": "ascii-only",
+      "label": "Strip non-ASCII",
+      "survivors": 0,
+      "destroyed": 18
+    },
+    {
+      "id": "printable-filter",
+      "label": "Strip Unicode format characters (\\p{Cf})",
+      "survivors": 7,
+      "destroyed": 11
+    }
+  ],
+  "survivesEverythingIncidental": [
+    "U+200B",
+    "U+200C",
+    "U+200D",
+    "U+2060",
+    "U+00AD",
+    "U+034F",
+    "U+061C",
+    "U+200E",
+    "U+202D",
+    "U+2066",
+    "U+FE0F",
+    "U+E0041"
+  ],
+  "note": "Survival means the exact code point is still present after the transformation. It does not mean the text is unchanged, and it says nothing about applications this script cannot run."
+}

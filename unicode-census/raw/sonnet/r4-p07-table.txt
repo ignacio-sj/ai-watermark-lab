@@ -1,0 +1,7 @@
+| Attribute | Python | JavaScript | Rust | Go |
+|---|---|---|---|---|
+| Typing | Dynamic, strong | Dynamic, weak | Static, strong | Static, strong |
+| Performance | Slower (interpreted) | Moderate (JIT-compiled) | Very fast (compiled, no GC) | Fast (compiled, GC) |
+| Memory Management | Automatic (GC) | Automatic (GC) | Manual via ownership/borrowing | Automatic (GC) |
+| Primary Use Cases | Data science, scripting, ML | Web frontend, Node.js backend | Systems programming, performance-critical apps | Cloud services, networking, concurrency |
+| Learning Curve | Easy | Easy to moderate | Steep | Moderate |
